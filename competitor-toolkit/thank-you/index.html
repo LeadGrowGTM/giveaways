@@ -13,8 +13,10 @@
         p { font-size: 1.2rem; color: #666; margin-bottom: 32px; }
         .gif-container { margin: 32px 0; border-radius: 16px; overflow: hidden; }
         .gif-container img { max-width: 100%; height: auto; border-radius: 16px; }
-        .download-btn { display: inline-block; padding: 18px 40px; background: #eb8b6a; color: white; text-decoration: none; border-radius: 8px; font-size: 1.2rem; font-weight: 700; margin-top: 24px; transition: background 0.2s; }
-        .download-btn:hover { background: #d97a5a; }
+        .checklist { text-align: left; max-width: 400px; margin: 0 auto 32px; }
+        .checklist-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e5e0db; font-size: 1rem; color: #2d2d2d; }
+        .checklist-item:last-child { border-bottom: none; }
+        .check { color: #62b3ae; font-weight: 700; font-size: 1.2rem; }
         .subtext { font-size: 0.9rem; color: #888; margin-top: 24px; }
         .footer { margin-top: 48px; font-size: 0.85rem; color: #888; }
         .footer a { color: #eb8b6a; text-decoration: none; }
@@ -22,12 +24,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>You're <span>In!</span></h1>
-        <p>Check your email for the download link. It should arrive in the next few minutes.</p>
+        <h1>You're <span>In.</span></h1>
+        <p>Check your email. The full toolkit is on its way.</p>
         <div class="gif-container">
-            <img src="https://media1.tenor.com/m/Rgs2X-0m8q0AAAAC/gojo-satoru-jujutsu-kaisen.gif" alt="Gojo approves">
+            <img src="https://media1.tenor.com/m/cfV2dmJZLEIAAAAd/gojo-domain-expansion.gif" alt="Gojo Domain Expansion">
         </div>
-        <p class="subtext">If you don't see it, check your spam folder.</p>
+        <div class="checklist">
+            <div class="checklist-item"><span class="check">&#10003;</span> LinkedIn Monitoring System</div>
+            <div class="checklist-item"><span class="check">&#10003;</span> Job Post Tech Stack Miner</div>
+            <div class="checklist-item"><span class="check">&#10003;</span> Competitor Takedown Playbook</div>
+            <div class="checklist-item"><span class="check">&#10003;</span> Social Media Monitoring</div>
+        </div>
+        <p class="subtext">If you don't see the email in a few minutes, check your spam folder.</p>
         <div class="footer">
             <a href="https://leadgrow.ai" target="_blank">LeadGrow</a> - Situation-based outbound that works.
         </div>
