@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Figtree', system-ui, -apple-system, sans-serif; background: #F4F3EF; color: #57534D; min-height: 100vh; }
+        body { font-family: 'Figtree', system-ui, -apple-system, sans-serif; background: #1C1917; color: #57534D; min-height: 100vh; }
 
         /* Nav */
-        .nav { padding: 20px 0; border-bottom: 1px solid #D6D3D1; }
+        .nav { padding: 20px 0; border-bottom: 1px solid #D6D3D1; background: #F4F3EF; }
         .nav .container { display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { font-size: 1.3rem; font-weight: 700; color: #352922; text-decoration: none; }
         .nav-logo span { color: #6FAEC2; }
@@ -27,6 +27,8 @@
         .header p { font-size: 1.15rem; color: #A8A29E; max-width: 540px; margin: 0 auto 12px; }
         .header .counter { font-size: 0.9rem; color: #A8A29E; margin-top: 8px; }
         .header .counter strong { color: #EB8B4B; font-weight: 700; }
+
+        .main-content { background: #F4F3EF; }
 
         /* Cards grid */
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 760px; margin: 0 auto; padding: 48px 0 80px; }
@@ -104,6 +106,7 @@
         </div>
     </nav>
 
+    <div class="main-content">
     <div class="container">
         <div class="header">
             <div class="eyebrow">Open Source</div>
@@ -158,6 +161,7 @@
                 </div>
             </a>
         </div>
+    </div>
     </div>
 
     <footer class="footer">
