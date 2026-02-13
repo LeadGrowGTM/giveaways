@@ -5,14 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeadGrow Giveaways</title>
     <style>
-        body { font-family: system-ui, sans-serif; background: #f7f3ef; color: #2d2d2d; padding: 60px 20px; text-align: center; }
-        h1 { margin-bottom: 40px; }
-        a { display: inline-block; padding: 16px 32px; background: #eb8b6a; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; }
-        a:hover { background: #d97a5a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: #f7f3ef; color: #2d2d2d; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 20px; }
+        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
+        h1 span { color: #62b3ae; }
+        .subtitle { color: #888; font-size: 1.05rem; margin-bottom: 48px; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; width: 100%; }
+        .card { background: white; border-radius: 12px; padding: 32px; border: 1px solid #e5e0db; text-align: center; text-decoration: none; color: #2d2d2d; transition: box-shadow 0.2s, transform 0.2s; }
+        .card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .card .emoji { font-size: 2.5rem; margin-bottom: 16px; }
+        .card h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
+        .card p { font-size: 0.9rem; color: #666; margin-bottom: 16px; line-height: 1.5; }
+        .card .btn { display: inline-block; padding: 10px 24px; background: #eb8b6a; color: white; border-radius: 8px; font-size: 0.9rem; font-weight: 600; }
+        .footer { margin-top: 48px; font-size: 0.85rem; color: #888; }
+        .footer a { color: #eb8b6a; text-decoration: none; }
+        @media (max-width: 768px) { .cards { grid-template-columns: 1fr; max-width: 400px; } }
     </style>
 </head>
 <body>
-    <h1>LeadGrow Giveaways</h1>
-    <a href="/b2b-database">8.5M B2B Records</a>
+    <h1>Lead<span>Grow</span> Giveaways</h1>
+    <p class="subtitle">Free tools and data for B2B growth teams.</p>
+    <div class="cards">
+        <a href="/b2b-database" class="card">
+            <div class="emoji">📊</div>
+            <h2>8.5M B2B Records</h2>
+            <p>Companies, executives, investors, and funding data. 148 files. Segmented by industry.</p>
+            <span class="btn">Get The Data</span>
+        </a>
+        <a href="/competitor-toolkit" class="card">
+            <div class="emoji">🎯</div>
+            <h2>Competitor Intelligence Toolkit</h2>
+            <p>3 systems to find, monitor, and outposition your competitors. Plus the playbook.</p>
+            <span class="btn">Get The Toolkit</span>
+        </a>
+        <a href="/linkedin-monitoring" class="card">
+            <div class="emoji">📡</div>
+            <h2>LinkedIn Engagement Monitor</h2>
+            <p>Track any LinkedIn profile's engagers. Enrich with job titles. Score leads automatically.</p>
+            <span class="btn">Get The Monitor</span>
+        </a>
+    </div>
+    <div class="footer">
+        <a href="https://leadgrow.ai" target="_blank">LeadGrow</a> - Situation-based outbound that works.
+    </div>
 </body>
 </html>
