@@ -18,7 +18,7 @@ Ask the user:
 - If reusing an existing form, note that the redirect URL will differentiate pages
 
 ### 3. Create Landing Page
-Create `{slug}/index.html` using the LinkedIn Monitoring page (`linkedin-monitoring/index.html`) as the reference template.
+Create `{slug}/index.html` using the Extract Competitors page (`extract-competitors/index.html`) as the reference template.
 
 Key elements to customize:
 - `<title>` tag and meta description
@@ -54,13 +54,14 @@ Key elements:
 - NO gif by default (ask user if they want one)
 
 ### 5. Update Hub Page
-Edit `index.html` (the root hub) to add a new card for this giveaway:
-- Add a new `<a href="/{slug}" class="card">` inside the `.cards` div
-- Include emoji, title, short description, and CTA button
-- Ask the user what emoji to use for the card
+Edit `index.html` (the root hub) to add a new card inside the `.grid` div. Follow the existing card pattern:
+- Use `<a href="{slug}/" class="card {color}">` where color is `teal`, `coral`, or `dark`
+- Include: `.accent` strip, `.icon-area` with SVG icon + `.tag`, `.card-body` with h2 + p, `.card-stats` with 3 stats, `.card-cta` with button
+- Reference existing cards in `index.html` for the exact HTML structure
+- Ask the user which color theme to use for the card
 
 ### 6. Update Grid Layout (if needed)
-If there are now more than 3 giveaways, consider switching the hub grid to `repeat(auto-fit, minmax(260px, 1fr))` instead of `repeat(3, 1fr)` so it wraps nicely.
+If there are now more than 2 giveaways, update the `.grid` CSS from `repeat(2, 1fr)` to `repeat(3, 1fr)` or `repeat(auto-fit, minmax(300px, 1fr))` so it wraps nicely.
 
 ### 7. Summary
 Show the user:
@@ -71,9 +72,9 @@ Show the user:
 - Ask if they want to commit and push
 
 ## Reference Pages
-- Landing page template: `linkedin-monitoring/index.html` (most complete, has redirect + ck.js)
-- Thank-you template: `competitor-toolkit/thank-you/index.html` (has item checklist)
-- Hub page: `index.html` (card grid layout)
+- Landing page template: `extract-competitors/index.html` (most complete, has redirect + ck.js)
+- Thank-you template: `extract-competitors/thank-you/index.html` (has item checklist)
+- Hub page: `index.html` (card grid with accent strips, SVG icons, stats, CTAs)
 
 ## Design System Quick Reference
 | Element | Value |

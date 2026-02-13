@@ -19,8 +19,8 @@ CNAME                               # Custom domain config
 | Slug | Kit Form ID | Description |
 |------|-------------|-------------|
 | `b2b-database` | `9029460` | 8.5M segmented B2B records |
-| `competitor-toolkit` | `9067339` | 3 competitor intelligence systems + playbook |
-| `linkedin-monitoring` | `9067339` | LinkedIn engagement monitor app |
+| `extract-competitors` | `9067339` | Competitor customer targeting stack (3 scraping vectors) |
+| `competitor-toolkit` | `9067339` | 3 competitor intelligence systems + playbook (legacy) |
 
 ## Form Redirects
 Every Kit form MUST have a hidden redirect input:
