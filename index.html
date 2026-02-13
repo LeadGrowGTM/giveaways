@@ -37,12 +37,6 @@
         .card { background: white; border-radius: 16px; text-decoration: none; color: inherit; overflow: hidden; border: 1px solid #D6D3D1; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; position: relative; }
         .card:hover { transform: translateY(-6px); box-shadow: 0px 4px 55px rgba(53, 41, 34, 0.2), 0px 2px 5px rgba(53, 41, 34, 0.2); }
 
-        /* Card accent strip */
-        .card .accent { height: 4px; width: 100%; }
-        .card.teal .accent { background: linear-gradient(90deg, #6FAEC2, #8CC5D6); }
-        .card.coral .accent { background: linear-gradient(90deg, #EB8B4B, #F5A66E); }
-        .card.dark .accent { background: linear-gradient(90deg, #352922, #57534D); }
-
         /* Card icon area */
         .card .icon-area { padding: 36px 32px 0; display: flex; align-items: center; gap: 16px; }
         .card .icon-circle { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
@@ -117,7 +111,7 @@
         <div class="grid">
             <!-- Card 1: Extract Competitors -->
             <a href="extract-competitors/" class="card teal">
-                <div class="accent"></div>
+
                 <div class="icon-area">
                     <div class="icon-circle">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
@@ -140,7 +134,7 @@
 
             <!-- Card 2: B2B Database -->
             <a href="b2b-database/" class="card coral">
-                <div class="accent"></div>
+
                 <div class="icon-area">
                     <div class="icon-circle">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.69 2 8v8c0 3.31 4.48 6 10 6s10-2.69 10-6V8c0-3.31-4.48-6-10-6zm0 14c-4.42 0-8-1.79-8-4v-1.52C5.76 12.01 8.69 13 12 13s6.24-.99 8-2.52V12c0 2.21-3.58 4-8 4zm0-8c-4.42 0-8-1.79-8-4s3.58-4 8-4 8 1.79 8 4-3.58 4-8 4z" fill="white"/></svg>
