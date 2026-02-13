@@ -4,41 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8.5M B2B Records - Free Download | LeadGrow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #2d2d2d; background: #f7f3ef; }
+        body { font-family: 'Figtree', system-ui, -apple-system, sans-serif; line-height: 1.6; color: #57534D; background: #F4F3EF; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .hero { background: #f7f3ef; color: #2d2d2d; padding: 80px 0; }
+        .hero { background: #F4F3EF; color: #57534D; padding: 80px 0; }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .hero-content h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: 20px; line-height: 1.15; color: #2d2d2d; }
-        .hero-content h1 span { color: #62b3ae; }
-        .hero-content p { font-size: 1.2rem; color: #666; margin-bottom: 24px; }
+        .hero-content h1 { font-size: 2.75rem; font-weight: 700; margin-bottom: 20px; line-height: 1.15; color: #57534D; }
+        .hero-content h1 span { color: #6FAEC2; }
+        .hero-content p { font-size: 1.2rem; color: #78716C; margin-bottom: 24px; }
         .hero-stats { display: flex; gap: 32px; margin-top: 32px; }
-        .hero-stat .num { font-size: 2rem; font-weight: 700; color: #eb8b6a; }
-        .hero-stat .label { font-size: 0.9rem; color: #888; }
-        .form-card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
-        .form-card h2 { color: #2d2d2d; font-size: 1.5rem; margin-bottom: 8px; text-align: center; }
-        .form-card .subtext { color: #888; font-size: 0.95rem; margin-bottom: 24px; text-align: center; }
-        .form-card input[type="email"], .form-card input[type="text"] { width: 100%; padding: 14px 16px; border: 2px solid #e5e0db; border-radius: 8px; font-size: 1rem; margin-bottom: 12px; background: #faf9f7; }
-        .form-card input[type="email"]:focus, .form-card input[type="text"]:focus { outline: none; border-color: #62b3ae; background: white; }
-        .form-card input[type="submit"] { width: 100%; padding: 16px; background: #eb8b6a; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; cursor: pointer; }
-        .form-card input[type="submit"]:hover { background: #d97a5a; }
-        .form-card .guarantee { font-size: 0.8rem; color: #888; text-align: center; margin-top: 16px; }
-        .stats-section { padding: 60px 0; background: #faf9f7; }
+        .hero-stat .num { font-size: 2rem; font-weight: 700; color: #EB8B4B; }
+        .hero-stat .label { font-size: 0.9rem; color: #A8A29E; }
+        .form-card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0px 4px 15px rgba(53, 41, 34, 0.2); }
+        .form-card h2 { color: #57534D; font-size: 1.5rem; margin-bottom: 8px; text-align: center; }
+        .form-card .subtext { color: #A8A29E; font-size: 0.95rem; margin-bottom: 24px; text-align: center; }
+        .form-card input[type="email"], .form-card input[type="text"] { width: 100%; padding: 14px 16px; border: 2px solid #D6D3D1; border-radius: 8px; font-size: 1rem; margin-bottom: 12px; background: #F4F3EF; }
+        .form-card input[type="email"]:focus, .form-card input[type="text"]:focus { outline: none; border-color: #6FAEC2; background: white; }
+        .form-card input[type="submit"] { width: 100%; padding: 16px; background: linear-gradient(135deg, #C2845B 0%, #FFAF1A 100%); color: white; border: none; border-radius: 75px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: transform 0.2s ease; }
+        .form-card input[type="submit"]:hover { background: #C2845B; transform: scale(1.03); }
+        .form-card .guarantee { font-size: 0.8rem; color: #A8A29E; text-align: center; margin-top: 16px; }
+        .stats-section { padding: 60px 0; background: #F4F3EF; }
         .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-        .stat-card { background: white; border-radius: 12px; padding: 28px; text-align: center; border: 1px solid #e5e0db; }
-        .stat-card .number { font-size: 2.5rem; font-weight: 700; color: #2d2d2d; }
-        .stat-card .label { font-size: 0.95rem; color: #888; margin-top: 8px; }
-        .breakdown-section { padding: 60px 0; background: #f7f3ef; }
-        .section-title { font-size: 1.75rem; text-align: center; margin-bottom: 40px; color: #2d2d2d; }
+        .stat-card { background: white; border-radius: 12px; padding: 28px; text-align: center; border: 1px solid #D6D3D1; }
+        .stat-card .number { font-size: 2.5rem; font-weight: 700; color: #57534D; }
+        .stat-card .label { font-size: 0.95rem; color: #A8A29E; margin-top: 8px; }
+        .breakdown-section { padding: 60px 0; background: #F4F3EF; }
+        .section-title { font-size: 1.75rem; text-align: center; margin-bottom: 40px; color: #57534D; }
         .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-        .breakdown-card { background: white; border-radius: 10px; padding: 18px 24px; display: flex; justify-content: space-between; border: 1px solid #e5e0db; }
-        .breakdown-card .category { font-weight: 600; color: #2d2d2d; }
-        .breakdown-card .count { font-weight: 700; color: #62b3ae; }
-        .footer { background: #2d2d2d; color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
-        .footer a { color: #eb8b6a; text-decoration: none; }
+        .breakdown-card { background: white; border-radius: 10px; padding: 18px 24px; display: flex; justify-content: space-between; border: 1px solid #D6D3D1; }
+        .breakdown-card .category { font-weight: 600; color: #57534D; }
+        .breakdown-card .count { font-weight: 700; color: #6FAEC2; }
+        .footer { background: #352922; color: rgba(255,255,255,0.7); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+        .footer a { color: #EB8B4B; text-decoration: none; }
         @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .hero-content { text-align: center; } .hero-stats { justify-content: center; } .stats-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .hero-content h1 { font-size: 2rem; } .stats-grid { grid-template-columns: 1fr 1fr; } .stat-card .number { font-size: 1.75rem; } }
+        @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-reduced-motion: no-preference) {
+            .hero-content { animation: fade-up 0.5s ease-out; }
+            .form-card { animation: fade-up 0.5s ease-out 0.1s both; }
+        }
     </style>
 </head>
 <body>
@@ -79,9 +87,9 @@
             </div>
         </div>
     </section>
-    <section class="image-section" style="padding: 40px 0; background: #1a1a2e;">
+    <section class="image-section" style="padding: 40px 0; background: #1C1917;">
         <div class="container" style="text-align: center;">
-            <img src="breakdown.png" alt="Complete Data Breakdown" style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            <img src="breakdown.png" alt="Complete Data Breakdown" style="max-width: 100%; border-radius: 12px; box-shadow: 0px 4px 15px rgba(53, 41, 34, 0.3);">
         </div>
     </section>
     <section class="breakdown-section">

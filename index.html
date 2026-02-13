@@ -5,76 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Tools & Resources | LeadGrow</title>
     <meta name="description" content="Free B2B tools, systems, and playbooks from LeadGrow. Competitor targeting, intelligence toolkit, B2B databases, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: #f7f3ef; color: #2d2d2d; min-height: 100vh; }
+        body { font-family: 'Figtree', system-ui, -apple-system, sans-serif; background: #F4F3EF; color: #57534D; min-height: 100vh; }
 
         /* Nav */
-        .nav { padding: 20px 0; border-bottom: 1px solid #e5e0db; }
+        .nav { padding: 20px 0; border-bottom: 1px solid #D6D3D1; }
         .nav .container { display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 1.3rem; font-weight: 700; color: #2d2d2d; text-decoration: none; }
-        .nav-logo span { color: #62b3ae; }
+        .nav-logo { font-size: 1.3rem; font-weight: 700; color: #352922; text-decoration: none; }
+        .nav-logo span { color: #6FAEC2; }
         .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 
         /* Header */
         .header { text-align: center; padding: 72px 0 16px; }
-        .header .eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #62b3ae; margin-bottom: 16px; }
-        .header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; }
-        .header h1 span { color: #62b3ae; }
-        .header p { font-size: 1.15rem; color: #888; max-width: 540px; margin: 0 auto 12px; }
-        .header .counter { font-size: 0.9rem; color: #aaa; margin-top: 8px; }
-        .header .counter strong { color: #eb8b6a; font-weight: 700; }
+        .header .eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #6FAEC2; margin-bottom: 16px; }
+        .header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; color: #352922; }
+        .header h1 span { color: #6FAEC2; }
+        .header p { font-size: 1.15rem; color: #A8A29E; max-width: 540px; margin: 0 auto 12px; }
+        .header .counter { font-size: 0.9rem; color: #A8A29E; margin-top: 8px; }
+        .header .counter strong { color: #EB8B4B; font-weight: 700; }
 
         /* Cards grid */
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 760px; margin: 0 auto; padding: 48px 0 80px; }
 
         /* Card */
-        .card { background: white; border-radius: 16px; text-decoration: none; color: inherit; overflow: hidden; border: 1px solid #e5e0db; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; position: relative; }
-        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+        .card { background: white; border-radius: 16px; text-decoration: none; color: inherit; overflow: hidden; border: 1px solid #D6D3D1; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; position: relative; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0px 4px 55px rgba(53, 41, 34, 0.2), 0px 2px 5px rgba(53, 41, 34, 0.2); }
 
         /* Card accent strip */
         .card .accent { height: 4px; width: 100%; }
-        .card.teal .accent { background: linear-gradient(90deg, #62b3ae, #7ecbc7); }
-        .card.coral .accent { background: linear-gradient(90deg, #eb8b6a, #f0a488); }
-        .card.dark .accent { background: linear-gradient(90deg, #2d2d2d, #4a4a4a); }
+        .card.teal .accent { background: linear-gradient(90deg, #6FAEC2, #8CC5D6); }
+        .card.coral .accent { background: linear-gradient(90deg, #EB8B4B, #F5A66E); }
+        .card.dark .accent { background: linear-gradient(90deg, #352922, #57534D); }
 
         /* Card icon area */
         .card .icon-area { padding: 36px 32px 0; display: flex; align-items: center; gap: 16px; }
         .card .icon-circle { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .card.teal .icon-circle { background: linear-gradient(135deg, #62b3ae, #4a9a96); }
-        .card.coral .icon-circle { background: linear-gradient(135deg, #eb8b6a, #d97a5a); }
-        .card.dark .icon-circle { background: linear-gradient(135deg, #3a3a3a, #2d2d2d); }
+        .card.teal .icon-circle { background: linear-gradient(135deg, #6FAEC2, #5A9AAD); }
+        .card.coral .icon-circle { background: linear-gradient(135deg, #EB8B4B, #C2845B); }
+        .card.dark .icon-circle { background: linear-gradient(135deg, #44403C, #352922); }
         .card .icon-circle svg { width: 26px; height: 26px; fill: white; }
-        .card .tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 12px; border-radius: 20px; }
-        .card.teal .tag { background: #e8f5f4; color: #4a9a96; }
-        .card.coral .tag { background: #fde8e0; color: #c9694a; }
-        .card.dark .tag { background: #eee; color: #555; }
+        .card .tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 12px; border-radius: 48px; }
+        .card.teal .tag { background: #E8F4F7; color: #5A9AAD; }
+        .card.coral .tag { background: #FDE8DC; color: #C2845B; }
+        .card.dark .tag { background: #E7E5E4; color: #57534D; }
 
         /* Card body */
         .card .card-body { padding: 24px 32px 20px; flex-grow: 1; }
-        .card .card-body h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; line-height: 1.25; }
-        .card .card-body p { font-size: 0.92rem; color: #666; line-height: 1.6; }
+        .card .card-body h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; line-height: 1.25; color: #352922; }
+        .card .card-body p { font-size: 0.92rem; color: #78716C; line-height: 1.6; }
 
         /* Card stats */
-        .card .card-stats { display: flex; gap: 0; border-top: 1px solid #f0ebe6; margin: 0 32px; }
+        .card .card-stats { display: flex; gap: 0; border-top: 1px solid #E7E5E4; margin: 0 32px; }
         .card .stat { flex: 1; padding: 14px 0; text-align: center; }
-        .card .stat:not(:last-child) { border-right: 1px solid #f0ebe6; }
-        .card .stat .val { font-size: 1.1rem; font-weight: 800; color: #2d2d2d; }
-        .card .stat .lbl { font-size: 0.7rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+        .card .stat:not(:last-child) { border-right: 1px solid #E7E5E4; }
+        .card .stat .val { font-size: 1.1rem; font-weight: 800; color: #352922; }
+        .card .stat .lbl { font-size: 0.7rem; color: #A8A29E; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
         /* Card CTA */
         .card .card-cta { padding: 0 32px 28px; margin-top: auto; }
-        .card .cta-btn { display: block; text-align: center; padding: 14px; border-radius: 10px; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease; }
-        .card.teal .cta-btn { background: #62b3ae; color: white; }
-        .card.teal .cta-btn:hover { background: #4a9a96; }
-        .card.coral .cta-btn { background: #eb8b6a; color: white; }
-        .card.coral .cta-btn:hover { background: #d97a5a; }
-        .card.dark .cta-btn { background: #2d2d2d; color: white; }
-        .card.dark .cta-btn:hover { background: #1a1a1a; }
+        .card .cta-btn { display: block; text-align: center; padding: 14px; border-radius: 75px; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: transform 0.2s ease; color: white; }
+        .card .cta-btn:hover { transform: scale(1.03); }
+        .card.teal .cta-btn { background: linear-gradient(135deg, #6FAEC2, #5A9AAD); }
+        .card.coral .cta-btn { background: linear-gradient(135deg, #C2845B, #FFAF1A); }
+        .card.dark .cta-btn { background: linear-gradient(135deg, #44403C, #352922); }
 
         /* Footer */
-        .footer { background: #1a1a1a; color: rgba(255,255,255,0.5); padding: 36px 0; text-align: center; font-size: 0.85rem; }
-        .footer a { color: #eb8b6a; text-decoration: none; }
+        .footer { background: #1C1917; color: rgba(255,255,255,0.5); padding: 36px 0; text-align: center; font-size: 0.85rem; }
+        .footer a { color: #EB8B4B; text-decoration: none; }
+
+        /* Animations */
+        @keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-reduced-motion: no-preference) {
+            .header { animation: fade-up 0.5s ease-out; }
+            .card { animation: fade-up 0.5s ease-out both; }
+            .card:nth-child(2) { animation-delay: 0.1s; }
+        }
 
         /* Responsive */
         @media (max-width: 900px) {

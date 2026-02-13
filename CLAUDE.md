@@ -31,21 +31,30 @@ Without this, Kit shows its default success page instead of our thank-you page.
 
 Pages using ConvertKit JS (`ck.5.js`) intercept form submission via AJAX — the hidden input ensures the redirect still works.
 
-## Design System
+## Design System (LeadGrow Brand Kit)
 | Token | Value |
 |-------|-------|
-| Background | `#f7f3ef` |
+| Font | `'Figtree', system-ui, -apple-system, sans-serif` |
+| Background | `#F4F3EF` (warm cream) |
 | Card bg | `white` |
-| Text primary | `#2d2d2d` |
-| Text secondary | `#666` |
-| Text muted | `#888` |
-| Accent teal | `#62b3ae` |
-| CTA orange | `#eb8b6a` |
-| CTA hover | `#d97a5a` |
-| Border color | `#e5e0db` |
+| Text primary | `#352922` (headings) / `#57534D` (body) |
+| Text secondary | `#78716C` (stone-500) |
+| Text muted | `#A8A29E` (stone-400) |
+| Accent teal | `#6FAEC2` |
+| Accent teal dark | `#5A9AAD` |
+| CTA gradient | `linear-gradient(135deg, #C2845B 0%, #FFAF1A 100%)` |
+| CTA solid | `#EB8B4B` (primary orange) |
+| Border color | `#D6D3D1` (stone-300) |
+| Light border | `#E7E5E4` (stone-200) |
+| Dark bg | `#352922` (dark brown) |
+| Footer bg | `#1C1917` (stone-900) |
 | Card radius | `12px` |
 | Form card radius | `16px` |
-| Font | `system-ui, -apple-system, sans-serif` |
+| Button radius | `75px` (pill) |
+| Badge radius | `48px` |
+| Shadow | `0px 4px 15px rgba(53, 41, 34, 0.2)` |
+
+Brand kit source: `/home/del13s_ubuntu/MACH4_2/leadgrow-brand-kit/`
 
 ## Commands
 - `/new-giveaway {name} - {description}` — Scaffold a new giveaway page

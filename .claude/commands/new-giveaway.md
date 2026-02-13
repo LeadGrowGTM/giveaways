@@ -33,14 +33,25 @@ Key elements to customize:
 - Include `<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>` before closing body
 - Use `data-sv-form="{formId}"` and `data-uid` attributes on the form if using ck.js
 
-Design system (MUST follow):
-- Background: `#f7f3ef`
-- Text: `#2d2d2d`
-- Accent teal: `#62b3ae`
-- CTA orange: `#eb8b6a` (hover: `#d97a5a`)
-- Cards: white bg, `border: 1px solid #e5e0db`, `border-radius: 12px`
-- Font: `system-ui, -apple-system, sans-serif`
+Design system (MUST follow — LeadGrow Brand Kit):
+- Font: `'Figtree', system-ui, -apple-system, sans-serif` (add Google Fonts link in head)
+- Background: `#F4F3EF` (warm cream)
+- Text headings: `#352922` (dark brown)
+- Text body: `#57534D` (gray-brown)
+- Text secondary: `#78716C` (stone-500)
+- Text muted: `#A8A29E` (stone-400)
+- Accent teal: `#6FAEC2` (dark: `#5A9AAD`)
+- CTA buttons: `background: linear-gradient(135deg, #C2845B 0%, #FFAF1A 100%); border-radius: 75px;`
+- CTA hover: `transform: scale(1.03)`
+- CTA solid (links, accents): `#EB8B4B`
+- Cards: white bg, `border: 1px solid #D6D3D1`, `border-radius: 12px`
+- Form card: `border-radius: 16px`, `box-shadow: 0px 4px 15px rgba(53, 41, 34, 0.2)`
+- Dark sections: `#352922`, Footer: `#1C1917`
+- Input focus border: `#6FAEC2`
+- Badge radius: `48px`
 - Responsive: single column below 900px, stack stats below 600px
+- Animation: `@keyframes fade-up` with `prefers-reduced-motion` guard
+- Google Fonts link: `<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">`
 
 ### 4. Create Thank-You Page
 Create `{slug}/thank-you/index.html` using the Competitor Toolkit thank-you page (`competitor-toolkit/thank-you/index.html`) as the reference template.
@@ -76,24 +87,31 @@ Show the user:
 - Thank-you template: `extract-competitors/thank-you/index.html` (has item checklist)
 - Hub page: `index.html` (card grid with accent strips, SVG icons, stats, CTAs)
 
-## Design System Quick Reference
+## Design System Quick Reference (LeadGrow Brand Kit)
 | Element | Value |
 |---------|-------|
-| Background | `#f7f3ef` |
+| Font | `'Figtree', system-ui, -apple-system, sans-serif` |
+| Background | `#F4F3EF` |
 | Card bg | `white` |
-| Text primary | `#2d2d2d` |
-| Text secondary | `#666` |
-| Text muted | `#888` |
-| Accent teal | `#62b3ae` |
-| CTA orange | `#eb8b6a` |
-| CTA hover | `#d97a5a` |
-| Border | `#e5e0db` |
+| Text headings | `#352922` |
+| Text body | `#57534D` |
+| Text secondary | `#78716C` |
+| Text muted | `#A8A29E` |
+| Accent teal | `#6FAEC2` (dark: `#5A9AAD`) |
+| CTA gradient | `linear-gradient(135deg, #C2845B 0%, #FFAF1A 100%)` |
+| CTA solid | `#EB8B4B` |
+| Border | `#D6D3D1` |
+| Light border | `#E7E5E4` |
+| Dark bg | `#352922` |
+| Footer bg | `#1C1917` |
 | Card radius | `12px` |
 | Form card radius | `16px` |
+| Button radius | `75px` (pill) |
+| Badge radius | `48px` |
+| Shadow | `0px 4px 15px rgba(53, 41, 34, 0.2)` |
 | Section padding | `60px 0` |
 | Hero padding | `80px 0 60px` |
 | Max width | `1100px` |
-| Font | `system-ui, -apple-system, sans-serif` |
 
 ## Kit Form Setup Reminder
 After creating the pages, the user must:
