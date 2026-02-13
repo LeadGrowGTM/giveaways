@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LinkedIn Engagement Monitor - Free Tool | LeadGrow</title>
-    <meta name="description" content="Monitor any LinkedIn profile, scrape their engagers, enrich with job titles and companies, and score leads automatically. Full React + Supabase app. Free.">
+    <title>Competitor Customer Targeting Stack - Free Tool | LeadGrow</title>
+    <meta name="description" content="Full stack for targeting your competitors' customers. LinkedIn engagement monitoring, job description scraping, company follower scraping. React + Supabase app or run it via Claude Code. Free.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; color: #2d2d2d; background: #f7f3ef; }
@@ -46,6 +46,15 @@
         .use-card .emoji { font-size: 2rem; margin-bottom: 12px; }
         .use-card h3 { font-size: 1.05rem; color: #2d2d2d; margin-bottom: 8px; }
         .use-card p { font-size: 0.9rem; color: #666; }
+        .modes-section { padding: 60px 0; background: #f7f3ef; }
+        .modes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 800px; margin: 0 auto; }
+        .mode-card { background: white; border-radius: 12px; padding: 32px; border: 1px solid #e5e0db; }
+        .mode-card h3 { font-size: 1.15rem; color: #2d2d2d; margin-bottom: 8px; }
+        .mode-card .mode-label { display: inline-block; background: #62b3ae; color: white; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .mode-card p { font-size: 0.95rem; color: #666; margin-bottom: 8px; }
+        .mode-card ul { list-style: none; padding: 0; }
+        .mode-card ul li { font-size: 0.9rem; color: #666; padding: 4px 0; padding-left: 20px; position: relative; }
+        .mode-card ul li:before { content: "->"; position: absolute; left: 0; color: #62b3ae; font-weight: 700; }
         .cta-section { padding: 60px 0; background: #2d2d2d; text-align: center; }
         .cta-section h2 { color: white; font-size: 1.75rem; margin-bottom: 12px; }
         .cta-section p { color: rgba(255,255,255,0.7); font-size: 1.05rem; margin-bottom: 32px; }
@@ -63,6 +72,7 @@
             .hero-stats { justify-content: center; }
             .items-grid { grid-template-columns: 1fr; }
             .use-grid { grid-template-columns: 1fr; }
+            .modes-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 600px) {
             .hero-content h1 { font-size: 1.85rem; }
@@ -80,23 +90,23 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>The <span>LinkedIn Engagement</span> Monitor</h1>
-                    <p>Pick any LinkedIn profile. Get every person who liked or commented on their posts — enriched with job titles, companies, and a lead score. Full app, not a spreadsheet.</p>
+                    <h1>Target Your <span>Competitors' Customers</span></h1>
+                    <p>Full scraping stack to find who's engaging with your competitors on LinkedIn — their post engagers, company followers, and who's hiring for roles you solve. Deploy the app or run it straight from Claude Code.</p>
                     <div class="hero-stats">
-                        <div class="hero-stat"><div class="num">$0.005</div><div class="label">Per Engager</div></div>
+                        <div class="hero-stat"><div class="num">3</div><div class="label">Scraping Vectors</div></div>
                         <div class="hero-stat"><div class="num">1,000+</div><div class="label">Leads / $5 Mo</div></div>
                         <div class="hero-stat"><div class="num">Free</div><div class="label">Open Source</div></div>
                     </div>
                 </div>
                 <div class="form-card">
-                    <h2>Get the Full System</h2>
-                    <p class="subtext">App + scraping scripts + setup guide. Your inbox.</p>
+                    <h2>Get the Full Stack</h2>
+                    <p class="subtext">Scripts + app + Claude Code setup. Your inbox.</p>
                     <form action="https://app.kit.com/forms/9067339/subscriptions" method="post" data-sv-form="9067339" data-uid="6c55562cf2">
-                        <input type="hidden" name="options[redirect_url]" value="https://giveaway.leadgrow.ai/linkedin-monitoring/thank-you/">
+                        <input type="hidden" name="options[redirect_url]" value="https://giveaway.leadgrow.ai/extract-competitors/thank-you/">
                         <input name="email_address" placeholder="Work Email" required type="email">
                         <input name="fields[first_name]" placeholder="First Name" required type="text">
                         <input name="fields[last_name]" placeholder="Last Name" required type="text">
-                        <button type="submit">Send Me The Monitor</button>
+                        <button type="submit">Send Me The Stack</button>
                     </form>
                     <p class="guarantee">No spam. Unsubscribe anytime.</p>
                 </div>
@@ -106,26 +116,26 @@
 
     <section class="items-section">
         <div class="container">
-            <h2 class="section-title">What You Get</h2>
-            <p class="section-subtitle">A complete LinkedIn engagement monitoring system — deploy it yourself, own the data.</p>
+            <h2 class="section-title">Three Scraping Vectors, One Stack</h2>
+            <p class="section-subtitle">Every angle your competitors expose on LinkedIn — captured and enriched.</p>
             <div class="items-grid">
                 <div class="item-card">
                     <div class="item-number">1</div>
-                    <h3>Lead Dashboard App</h3>
-                    <p>React + Supabase app with filtering, searching, lead scoring (Hot/Warm/Cold), and CSV export. See every engager across every profile you monitor.</p>
-                    <span class="tag">React + Supabase</span>
+                    <h3>Engagement Monitoring</h3>
+                    <p>Scrape every person who likes or comments on your competitors' LinkedIn posts. Enriched with job title, company, and lead score automatically.</p>
+                    <span class="tag">Post Engagers</span>
                 </div>
                 <div class="item-card">
                     <div class="item-number">2</div>
-                    <h3>LinkedIn Scraping Scripts</h3>
-                    <p>Apify actors that scrape posts, extract likers and commenters, and enrich profiles with job titles, companies, and connection counts. Runs on autopilot.</p>
-                    <span class="tag">Apify Actors</span>
+                    <h3>Company Follower Scraping</h3>
+                    <p>Pull the follower lists from competitor company pages. These people already opted in to hear about solutions like yours — they just chose the wrong one.</p>
+                    <span class="tag">Follower Lists</span>
                 </div>
                 <div class="item-card">
                     <div class="item-number">3</div>
-                    <h3>Setup Guide</h3>
-                    <p>Step-by-step deployment guide. Supabase project, Apify connection, environment config. You'll be scraping your first profile in under an hour.</p>
-                    <span class="tag">Docs + Video</span>
+                    <h3>Job Description Scraping</h3>
+                    <p>Find companies hiring for roles that signal they need what you sell. If they're building the team, they need the tools. You show up at the right moment.</p>
+                    <span class="tag">Hiring Signals</span>
                 </div>
             </div>
         </div>
@@ -134,49 +144,73 @@
     <section class="how-section">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Six steps from LinkedIn profile to scored lead list.</p>
+            <p class="section-subtitle">Pick your competitors. Get their audience. Score and export.</p>
             <div class="how-steps">
                 <div class="how-step">
                     <div class="step-num">1</div>
                     <div class="step-content">
-                        <h3>Pick profiles to monitor</h3>
-                        <p>Add any LinkedIn profile URL — competitors, influencers, prospects, industry voices.</p>
+                        <h3>Pick competitors to target</h3>
+                        <p>Add LinkedIn profile URLs, company pages, or job boards. Competitors, influencers, anyone in your space.</p>
                     </div>
                 </div>
                 <div class="how-step">
                     <div class="step-num">2</div>
                     <div class="step-content">
-                        <h3>Scrape recent posts</h3>
-                        <p>Apify pulls their latest posts and all public engagement data.</p>
+                        <h3>Run the scrapers</h3>
+                        <p>Engagement monitor pulls post likers/commenters. Follower scraper grabs company page followers. Job scraper finds companies hiring for your signal roles.</p>
                     </div>
                 </div>
                 <div class="how-step">
                     <div class="step-num">3</div>
                     <div class="step-content">
-                        <h3>Extract engagers</h3>
-                        <p>Every liker and commenter becomes a row — with their profile URL attached.</p>
+                        <h3>Enrich every lead</h3>
+                        <p>Job title, company, headline, connection count — pulled automatically for every person across all three vectors.</p>
                     </div>
                 </div>
                 <div class="how-step">
                     <div class="step-num">4</div>
                     <div class="step-content">
-                        <h3>Enrich profiles</h3>
-                        <p>Job title, company, headline, connection count. Pulled automatically.</p>
+                        <h3>Score and deduplicate</h3>
+                        <p>Leads scored Hot, Warm, or Cold. People appearing across multiple vectors get boosted. Duplicates merged.</p>
                     </div>
                 </div>
                 <div class="how-step">
                     <div class="step-num">5</div>
                     <div class="step-content">
-                        <h3>Score leads</h3>
-                        <p>Hot, Warm, or Cold — based on title match, engagement frequency, and company fit.</p>
+                        <h3>Filter, search, export</h3>
+                        <p>Dashboard lets you slice by score, source vector, title, company. Export to CSV for outreach.</p>
                     </div>
                 </div>
-                <div class="how-step">
-                    <div class="step-num">6</div>
-                    <div class="step-content">
-                        <h3>Filter, search, export</h3>
-                        <p>Dashboard lets you slice by score, title, company. Export to CSV for outreach.</p>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modes-section">
+        <div class="container">
+            <h2 class="section-title">Two Ways to Run It</h2>
+            <p class="section-subtitle">Full app deployment or run the whole thing from your terminal.</p>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <span class="mode-label">Deploy</span>
+                    <h3>React + Supabase App</h3>
+                    <p>Full dashboard with filtering, lead scoring, CSV export. Deploy once, monitor forever.</p>
+                    <ul>
+                        <li>Visual dashboard with search and filters</li>
+                        <li>Persistent lead database</li>
+                        <li>Scheduled scraping runs</li>
+                        <li>Team access via Supabase</li>
+                    </ul>
+                </div>
+                <div class="mode-card">
+                    <span class="mode-label">Terminal</span>
+                    <h3>Claude Code</h3>
+                    <p>Run every scraper, enrichment step, and export directly from Claude Code. No deployment needed.</p>
+                    <ul>
+                        <li>Zero setup — just run the scripts</li>
+                        <li>Natural language commands</li>
+                        <li>Pipe results into your existing workflow</li>
+                        <li>Modify scrapers on the fly</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -189,17 +223,17 @@
                 <div class="use-card">
                     <div class="emoji">🏢</div>
                     <h3>Agencies</h3>
-                    <p>Monitor your clients' competitors. Build lead lists from their audience. Add "LinkedIn intelligence" to your service stack.</p>
+                    <p>Build lead lists from your clients' competitors' audiences. Add "competitor intelligence" to your service stack.</p>
                 </div>
                 <div class="use-card">
                     <div class="emoji">🚀</div>
                     <h3>Founders &amp; SDRs</h3>
-                    <p>Find people already engaging with content in your space. They're warm — they just don't know you exist yet.</p>
+                    <p>Find people already engaging with competitors in your space. They have the problem — they just picked the wrong solution.</p>
                 </div>
                 <div class="use-card">
                     <div class="emoji">📈</div>
                     <h3>Growth Teams</h3>
-                    <p>Track which thought leaders drive engagement in your market. Map the audience overlap. Target the gaps.</p>
+                    <p>Map which competitors own which audience segments. Find the gaps. Target the overlap.</p>
                 </div>
             </div>
         </div>
@@ -207,9 +241,9 @@
 
     <section class="cta-section">
         <div class="container">
-            <h2>Stop guessing who's paying attention.</h2>
-            <p>Full app. Scraping scripts. Setup guide. Free. No call required.</p>
-            <a href="#top" class="cta-btn" onclick="document.querySelector('.hero').scrollIntoView({behavior:'smooth'});return false;">Get The Monitor</a>
+            <h2>Your competitors' customers are showing you where to aim.</h2>
+            <p>Three scraping vectors. Full app or Claude Code. Free. No call required.</p>
+            <a href="#top" class="cta-btn" onclick="document.querySelector('.hero').scrollIntoView({behavior:'smooth'});return false;">Get The Stack</a>
         </div>
     </section>
 

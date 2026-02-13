@@ -3,50 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeadGrow Giveaways</title>
+    <title>Free Tools & Resources | LeadGrow</title>
+    <meta name="description" content="Free B2B tools, systems, and playbooks from LeadGrow. Competitor targeting, intelligence toolkit, B2B databases, and more.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: #f7f3ef; color: #2d2d2d; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 20px; }
-        h1 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
-        h1 span { color: #62b3ae; }
-        .subtitle { color: #888; font-size: 1.05rem; margin-bottom: 48px; }
-        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 900px; width: 100%; }
-        .card { background: white; border-radius: 12px; padding: 32px; border: 1px solid #e5e0db; text-align: center; text-decoration: none; color: #2d2d2d; transition: box-shadow 0.2s, transform 0.2s; }
-        .card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.1); transform: translateY(-2px); }
-        .card .emoji { font-size: 2.5rem; margin-bottom: 16px; }
-        .card h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
-        .card p { font-size: 0.9rem; color: #666; margin-bottom: 16px; line-height: 1.5; }
-        .card .btn { display: inline-block; padding: 10px 24px; background: #eb8b6a; color: white; border-radius: 8px; font-size: 0.9rem; font-weight: 600; }
-        .footer { margin-top: 48px; font-size: 0.85rem; color: #888; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: #f7f3ef; color: #2d2d2d; min-height: 100vh; }
+
+        /* Nav */
+        .nav { padding: 20px 0; border-bottom: 1px solid #e5e0db; }
+        .nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3rem; font-weight: 700; color: #2d2d2d; text-decoration: none; }
+        .nav-logo span { color: #62b3ae; }
+        .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        .header { text-align: center; padding: 72px 0 16px; }
+        .header .eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #62b3ae; margin-bottom: 16px; }
+        .header h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; line-height: 1.1; }
+        .header h1 span { color: #62b3ae; }
+        .header p { font-size: 1.15rem; color: #888; max-width: 540px; margin: 0 auto 12px; }
+        .header .counter { font-size: 0.9rem; color: #aaa; margin-top: 8px; }
+        .header .counter strong { color: #eb8b6a; font-weight: 700; }
+
+        /* Cards grid */
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 760px; margin: 0 auto; padding: 48px 0 80px; }
+
+        /* Card */
+        .card { background: white; border-radius: 16px; text-decoration: none; color: inherit; overflow: hidden; border: 1px solid #e5e0db; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; flex-direction: column; position: relative; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+
+        /* Card accent strip */
+        .card .accent { height: 4px; width: 100%; }
+        .card.teal .accent { background: linear-gradient(90deg, #62b3ae, #7ecbc7); }
+        .card.coral .accent { background: linear-gradient(90deg, #eb8b6a, #f0a488); }
+        .card.dark .accent { background: linear-gradient(90deg, #2d2d2d, #4a4a4a); }
+
+        /* Card icon area */
+        .card .icon-area { padding: 36px 32px 0; display: flex; align-items: center; gap: 16px; }
+        .card .icon-circle { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .card.teal .icon-circle { background: linear-gradient(135deg, #62b3ae, #4a9a96); }
+        .card.coral .icon-circle { background: linear-gradient(135deg, #eb8b6a, #d97a5a); }
+        .card.dark .icon-circle { background: linear-gradient(135deg, #3a3a3a, #2d2d2d); }
+        .card .icon-circle svg { width: 26px; height: 26px; fill: white; }
+        .card .tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 12px; border-radius: 20px; }
+        .card.teal .tag { background: #e8f5f4; color: #4a9a96; }
+        .card.coral .tag { background: #fde8e0; color: #c9694a; }
+        .card.dark .tag { background: #eee; color: #555; }
+
+        /* Card body */
+        .card .card-body { padding: 24px 32px 20px; flex-grow: 1; }
+        .card .card-body h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; line-height: 1.25; }
+        .card .card-body p { font-size: 0.92rem; color: #666; line-height: 1.6; }
+
+        /* Card stats */
+        .card .card-stats { display: flex; gap: 0; border-top: 1px solid #f0ebe6; margin: 0 32px; }
+        .card .stat { flex: 1; padding: 14px 0; text-align: center; }
+        .card .stat:not(:last-child) { border-right: 1px solid #f0ebe6; }
+        .card .stat .val { font-size: 1.1rem; font-weight: 800; color: #2d2d2d; }
+        .card .stat .lbl { font-size: 0.7rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+        /* Card CTA */
+        .card .card-cta { padding: 0 32px 28px; margin-top: auto; }
+        .card .cta-btn { display: block; text-align: center; padding: 14px; border-radius: 10px; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: all 0.2s ease; }
+        .card.teal .cta-btn { background: #62b3ae; color: white; }
+        .card.teal .cta-btn:hover { background: #4a9a96; }
+        .card.coral .cta-btn { background: #eb8b6a; color: white; }
+        .card.coral .cta-btn:hover { background: #d97a5a; }
+        .card.dark .cta-btn { background: #2d2d2d; color: white; }
+        .card.dark .cta-btn:hover { background: #1a1a1a; }
+
+        /* Footer */
+        .footer { background: #1a1a1a; color: rgba(255,255,255,0.5); padding: 36px 0; text-align: center; font-size: 0.85rem; }
         .footer a { color: #eb8b6a; text-decoration: none; }
-        @media (max-width: 768px) { .cards { grid-template-columns: 1fr; max-width: 400px; } }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; }
+            .header h1 { font-size: 2.2rem; }
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .header { padding: 48px 0 8px; }
+            .grid { padding: 32px 0 60px; }
+        }
     </style>
 </head>
 <body>
-    <h1>Lead<span>Grow</span> Giveaways</h1>
-    <p class="subtitle">Free tools and data for B2B growth teams.</p>
-    <div class="cards">
-        <a href="/b2b-database" class="card">
-            <div class="emoji">📊</div>
-            <h2>8.5M B2B Records</h2>
-            <p>Companies, executives, investors, and funding data. 148 files. Segmented by industry.</p>
-            <span class="btn">Get The Data</span>
-        </a>
-        <a href="/competitor-toolkit" class="card">
-            <div class="emoji">🎯</div>
-            <h2>Competitor Intelligence Toolkit</h2>
-            <p>3 systems to find, monitor, and outposition your competitors. Plus the playbook.</p>
-            <span class="btn">Get The Toolkit</span>
-        </a>
-        <a href="/linkedin-monitoring" class="card">
-            <div class="emoji">📡</div>
-            <h2>LinkedIn Engagement Monitor</h2>
-            <p>Track any LinkedIn profile's engagers. Enrich with job titles. Score leads automatically.</p>
-            <span class="btn">Get The Monitor</span>
-        </a>
+    <nav class="nav">
+        <div class="container">
+            <a href="https://leadgrow.ai" target="_blank" class="nav-logo">Lead<span>Grow</span></a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <div class="eyebrow">Open Source</div>
+            <h1>Free <span>Tools</span> for B2B Teams</h1>
+            <p>Systems we built, battle-tested on real campaigns, and gave away. No call. No demo. Just the thing.</p>
+        </div>
+
+        <div class="grid">
+            <!-- Card 1: Extract Competitors -->
+            <a href="extract-competitors/" class="card teal">
+                <div class="accent"></div>
+                <div class="icon-area">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <span class="tag">3 Scraping Vectors</span>
+                </div>
+                <div class="card-body">
+                    <h2>Competitor Customer Targeting Stack</h2>
+                    <p>Scrape your competitors' LinkedIn engagers, company followers, and job posts. Enrich, score, and export. Deploy the app or run from Claude Code.</p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat"><div class="val">3</div><div class="lbl">Vectors</div></div>
+                    <div class="stat"><div class="val">1K+</div><div class="lbl">Leads/$5</div></div>
+                    <div class="stat"><div class="val">Free</div><div class="lbl">Forever</div></div>
+                </div>
+                <div class="card-cta">
+                    <div class="cta-btn">Get the Stack &rarr;</div>
+                </div>
+            </a>
+
+            <!-- Card 2: B2B Database -->
+            <a href="b2b-database/" class="card coral">
+                <div class="accent"></div>
+                <div class="icon-area">
+                    <div class="icon-circle">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4.69 2 8v8c0 3.31 4.48 6 10 6s10-2.69 10-6V8c0-3.31-4.48-6-10-6zm0 14c-4.42 0-8-1.79-8-4v-1.52C5.76 12.01 8.69 13 12 13s6.24-.99 8-2.52V12c0 2.21-3.58 4-8 4zm0-8c-4.42 0-8-1.79-8-4s3.58-4 8-4 8 1.79 8 4-3.58 4-8 4z" fill="white"/></svg>
+                    </div>
+                    <span class="tag">8.5M+ Records</span>
+                </div>
+                <div class="card-body">
+                    <h2>B2B Contact Database</h2>
+                    <p>4M companies, 2.8M executives, 582K investors. Segmented by industry, role, and company size. 148 files. Instant download.</p>
+                </div>
+                <div class="card-stats">
+                    <div class="stat"><div class="val">8.5M</div><div class="lbl">Records</div></div>
+                    <div class="stat"><div class="val">148</div><div class="lbl">Files</div></div>
+                    <div class="stat"><div class="val">Free</div><div class="lbl">Forever</div></div>
+                </div>
+                <div class="card-cta">
+                    <div class="cta-btn">Get the Database &rarr;</div>
+                </div>
+            </a>
+        </div>
     </div>
-    <div class="footer">
-        <a href="https://leadgrow.ai" target="_blank">LeadGrow</a> - Situation-based outbound that works.
-    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><a href="https://leadgrow.ai" target="_blank">LeadGrow</a> &mdash; Situation-based outbound that works.</p>
+        </div>
+    </footer>
 </body>
 </html>
