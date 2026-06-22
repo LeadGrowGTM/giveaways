@@ -11,6 +11,7 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Figtree', system-ui, -apple-system, sans-serif; background: #F4F3EF; color: #57534D; min-height: 100vh; display: flex; flex-direction: column; }
+        body, html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
         /* Nav */
         .nav { padding: 20px 0; border-bottom: 1px solid #D6D3D1; background: #F4F3EF; }
@@ -51,7 +52,7 @@
 
         /* Card body */
         .card .card-body { padding: 24px 32px 20px; flex-grow: 1; }
-        .card .card-body h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; line-height: 1.25; color: #352922; }
+        .card .card-body h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: 10px; line-height: 1.25; color: #352922; overflow-wrap: break-word; }
         .card .card-body p { font-size: 0.92rem; color: #78716C; line-height: 1.6; }
 
         /* Card stats */
@@ -91,6 +92,7 @@
             .header { padding: 48px 0 8px; }
             .grid { padding: 32px 0 60px; }
         }
+        img { outline: 1px solid rgba(0, 0, 0, 0.1); outline-offset: -1px; }
     </style>
 </head>
 <body>
